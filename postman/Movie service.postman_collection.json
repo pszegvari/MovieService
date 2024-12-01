@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "4a942c4d-af85-49c7-a06c-1f7ff25167f5",
+		"name": "Movie service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21348086"
+	},
+	"item": [
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "Braveheart - OMDB",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/movies/Braveheart?api=OMDB",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"Braveheart"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "OMDB"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Braveheart - TMDB",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/movies/Braveheart?api=TMDB",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"Braveheart"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "TMDB"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NonExistent",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/movies/foobarnomovie?api=OMDB",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"foobarnomovie"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "OMDB"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		},
+		{
+			"key": "movieTitle",
+			"value": "<string>"
+		},
+		{
+			"key": "apiName",
+			"value": "TMDB"
+		}
+	]
+}
